@@ -1,0 +1,23 @@
+<h1>Angular Component Inheritance and Template Swapping</h1>
+
+<p>
+  <a href="https://coryrylan.com/blog/angular-component-inheritance-and-template-swapping">Tutorial at coryrylan.com</a>
+</p>
+
+<button (click)="displayTable = true">Table</button>
+<button (click)="displayTable = false">List</button>
+
+<p>
+  Selected Employee: <br>
+  {{selectedEmployee.firstName}} {{selectedEmployee.lastName}}
+</p>
+
+<app-employee-list 
+  *ngIf="!displayTable"
+  [employees]="employees"
+  (select)="selectEmployee($event)"></app-employee-list>
+  
+<app-employee-table
+  *ngIf="displayTable"
+  [employees]="employees"
+  (select)="selectEmployee($event)"></app-employee-table>
