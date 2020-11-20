@@ -15,7 +15,7 @@ const employees: Employee[] = [
 })
 export class AppComponent {
   displayTable = true;
-  employees = employees
+  employees = employees;
   selectedEmployee = employees[0];
 
   constructor() { }
