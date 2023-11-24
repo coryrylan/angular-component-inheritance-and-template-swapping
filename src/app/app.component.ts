@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 import { EmployeeComponent } from '../employee/employee.component';
 import { EmployeeListComponent } from '../employee/employee-list.component';
 import { EmployeeTableComponent } from '../employee/employee-table.component';
@@ -14,7 +14,7 @@ const employees: Employee[] = [
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [EmployeeComponent, EmployeeListComponent, EmployeeTableComponent],
+  imports: [CommonModule, EmployeeComponent, EmployeeListComponent, EmployeeTableComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { EmployeeComponent } from './employee.component';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'app-employee-list',
   template: `
     <h1>{{heading}}</h1>
@@ -15,5 +18,5 @@ import { EmployeeComponent } from './employee.component';
   `
 })
 export class EmployeeListComponent extends EmployeeComponent {
-  heading = 'Employee List';
+  override heading = 'Employee List';
 }
