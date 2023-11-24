@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Employee } from './interfaces';
 
 @Component({
+  standalone: true,
   selector: 'app-employee',
   template: ''
 })

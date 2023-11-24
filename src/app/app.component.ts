@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
-import { Employee } from './employee/interfaces';
+import { EmployeeComponent } from '../employee/employee.component';
+import { EmployeeListComponent } from '../employee/employee-list.component';
+import { EmployeeTableComponent } from '../employee/employee-table.component';
+import { Employee } from '../employee/interfaces';
 
 const employees: Employee[] = [
   { id: 0, firstName: 'Luke', lastName: 'Skywalker', email: 'last_jedi@lukeskywalker.com' },
@@ -9,7 +12,9 @@ const employees: Employee[] = [
 ];
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
+  standalone: true,
+  imports: [EmployeeComponent, EmployeeListComponent, EmployeeTableComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
